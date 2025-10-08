@@ -4,6 +4,12 @@
     <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
 
+    <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>H 12 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+
     <!-- Task to clean build directory -->
     <target name="clean">
         <delete dir="${build.dir}"/>
